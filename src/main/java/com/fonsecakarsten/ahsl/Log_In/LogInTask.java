@@ -1,0 +1,120 @@
+package com.fonsecakarsten.ahsl.Log_In;
+
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.widget.Toast;
+
+import com.fonsecakarsten.ahsl.MainActivity;
+import com.fonsecakarsten.ahsl.Misc.API;
+import com.fonsecakarsten.ahsl.Misc.Utils;
+
+import java.io.IOException;
+import java.net.ConnectException;
+
+public class LogInTask extends AsyncTask<String, String, LogInTask.LoginStatus> {
+
+    public enum LoginStatus {
+        LOGIN_SUCCESS, LOGIN_FAIL, SERVER_ERROR, CONNECTION_ABORTED
+    }
+
+    private ProgressDialog progressDialog;
+    private final String username;
+    private final String pass;
+//  private String Error = "Error AHSL has timed out, please try again later";
+    private final String loginUrl = "https://ahs-antioch-ca.schoolloop.com";
+    private final Activity parent;
+//	private static int LOOP_TIME_OUT = 30000;
+
+    public LogInTask(String username, String password, Activity parent) {
+        this.username = username;
+        this.pass = password;
+        this.parent = parent;
+
+        API.get().setLoginTestUrl(this.loginUrl + "/student/prior_schedule");
+    }
+
+    @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+        progressDialog = ProgressDialog.show(parent, "", "Logging In...");
+
+    }
+
+    @Override
+    protected LoginStatus doInBackground(String... args) {
+        API.get().setCredentials(username, pass, loginUrl);
+
+        try {
+            API.get().logIn();
+            API.get().refreshPortal();
+
+            // check if this page, which is only accessible by logged-in sessions, returns a valid response
+            if (API.get().isLoggedIn(false))
+                return LoginStatus.LOGIN_SUCCESS;
+            else
+                return LoginStatus.LOGIN_FAIL;
+
+        } catch (ConnectException e) {
+            e.printStackTrace();
+
+            return LoginStatus.SERVER_ERROR;
+        } catch (IOException e) {
+            e.printStackTrace();
+
+            return LoginStatus.CONNECTION_ABORTED;
+        } finally {
+
+            // in case dialog does no longer exist, catch the error
+            Utils.safelyDismissDialog(progressDialog);
+
+            Utils.unlockOrientation(parent);
+        }
+    }
+
+    @Override
+    protected void onPostExecute(LoginStatus loginStatus) {
+        super.onPostExecute(loginStatus);
+
+        switch (loginStatus) {
+            case LOGIN_SUCCESS:
+                //System.out.println("\n\nLOG IN SUCCESS\n\n");
+
+	        	/*new Thread(new Runnable() {
+                    @Override
+					public void run() {
+						try {
+							Utils.doDemographicLog(loginUrl);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+	        	}).start();*/
+
+                @SuppressWarnings("NullArgumentToVariableArgMethod") ActivityOptionsCompat compat = ActivityOptionsCompat.makeSceneTransitionAnimation(parent, null);
+
+                Intent showPortalIntent = new Intent(parent, MainActivity.class);
+                parent.startActivity(showPortalIntent, compat.toBundle());
+                parent.finish();
+
+                break;
+            case LOGIN_FAIL:
+                //System.out.println("\n\nLOG IN FAIL\n\n");
+
+                Toast.makeText(parent, "Incorrect username or password please try again.", Toast.LENGTH_LONG).show();
+                break;
+            case SERVER_ERROR:
+                //System.out.println("\n\nSERVER ERROR...LOG IN FAIL\n\n");
+
+                Toast.makeText(parent, "Problems connecting to server, please try again later.", Toast.LENGTH_LONG).show();
+                break;
+            case CONNECTION_ABORTED:
+                //System.out.println("\n\nCONNECTION ABORTED...LOG IN FAIL\n\n");
+
+                Toast.makeText(parent, "Network connection lost while logging in, please re-connect and try again.", Toast.LENGTH_LONG).show();
+                break;
+        }
+    }
+}

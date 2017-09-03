@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:gravity="center"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <com.eevoskos.robotoviews.widget.RobotoTextView
+        android:id="@+id/score_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:text="Assignment"
+        android:textColor="@color/Black"
+        android:textSize="16sp"
+        roboto:typeface="regular"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <com.eevoskos.robotoviews.widget.RobotoTextView
+        android:id="@+id/score_weight"
+        android:layout_below="@+id/score_category"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight: 50%"
+        android:textColor="@color/Gray"
+        roboto:typeface="regular"
+        android:textSize="14sp" />
+
+    <com.eevoskos.robotoviews.widget.RobotoTextView
+        android:id="@+id/score_percent"
+        android:layout_below="@+id/score_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="Score: 100%"
+        android:textColor="@color/Gray"
+        android:textSize="14sp"
+        roboto:typeface="regular" />
+
+</RelativeLayout>

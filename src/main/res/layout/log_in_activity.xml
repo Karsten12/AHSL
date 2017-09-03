@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:flatui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+
+    <ImageView
+        android:id="@+id/panther"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_below="@+id/app_bar"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_panther2"
+        android:layout_marginTop="10dp"
+         />
+    
+    <com.cengalabs.flatui.views.FlatEditText
+    	android:id="@+id/Username"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/panther"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="@string/Username"
+        flatui:fl_theme="@array/sea"
+        flatui:fl_fieldStyle="1" >
+    </com.cengalabs.flatui.views.FlatEditText>
+
+    <com.cengalabs.flatui.views.FlatEditText
+        android:id="@+id/Password"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/Username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/Password"
+        android:inputType="textPassword"
+        flatui:fl_theme="@array/sea"
+        flatui:fl_fieldStyle="1" >
+    </com.cengalabs.flatui.views.FlatEditText>
+
+    <com.cengalabs.flatui.views.FlatButton
+        android:id="@+id/LogIn"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/Password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/Log_In"
+        android:onClick="logIn"
+        flatui:fl_theme="@array/sea" >
+    </com.cengalabs.flatui.views.FlatButton>
+
+    <com.cengalabs.flatui.views.FlatCheckBox
+        android:id="@+id/Remember_Me"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/LogIn"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/Remember_Me"
+        android:textSize="15sp"
+        flatui:fl_theme="@array/sea"
+        flatui:fl_fieldStyle="0"
+        flatui:fl_size="13dp" >
+    </com.cengalabs.flatui.views.FlatCheckBox>
+
+</RelativeLayout>

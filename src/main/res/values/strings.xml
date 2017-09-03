@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" translatable="false">AHSL</string>
+    <string name="drawer_close">drawer close</string>
+    <string name="drawer_open">drawer open</string>
+    <string name="Username">Username</string>
+    <string name="Password">Password</string>
+    <string name="Log_In">Log In</string>
+    <string name="Remember_Me">Remember Me</string>   
+    <string name="NEWAHS">Antioch High Schoolloop</string>
+
+    <string name="empty_courses">No courses are listed</string>
+    <string name="empty_mail">No mail is listed</string>
+    <string name="empty_news">No news is listed</string>
+    <string name="empty_assignments">No assignments!</string>
+    <string name="refresh">Refreshing</string>
+    <string name="toolbar_refresh">refresh</string>
+
+    <string name="Meet_developers">Meet the developers!!</string>
+    
+   	<!-- Strings for karsten_card -->
+   	<string name="karsten_info">"Karsten Fonseca"\n"CTO at Xodal LLC"\n"Software Engineer"\n"Senior at Antioch High's E.D.G.E."</string>
+	
+   	<!-- String for justin_card -->
+   	<string name="justin_info">"Justin Siao"\n"CEO at Xodal LLC"\n"Software Engineer"\n"Senior at Antioch High's E.D.G.E."</string>
+
+    <!-- String for about app -->
+    <string name="about_text">"Developed by Karsten Fonseca"\n"School Loop\u00AE and the School Loop logo are registered trademarks of School Loop, Inc"</string>
+
+	<!-- String Array for Navigation Drawer -->
+	<string-array
+        name="navigation_drawer_items_array">
+        <item>Portal</item>
+        <item>Progress Report</item>
+        <item>Loop Mail</item>
+        <item>Calendar</item>
+        <item>Locker</item>
+        <item>News</item>
+        <item>About</item>
+    </string-array>
+	
+</resources>

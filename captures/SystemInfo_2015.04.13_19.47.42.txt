@@ -1,0 +1,13 @@
+Applications Graphics Acceleration Info:
+Uptime: 1579150 Realtime: 1579150
+
+** Graphics info for pid 1460 [android.process.media] **
+Profile data in ms:
+
+View hierarchy:
+
+
+Total ViewRootImpl: 0
+Total Views:        0
+Total DisplayList:  0.00 kB
+

@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:flatui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_bar">
+
+        <!-- The main content view -->
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </FrameLayout>
+
+        <!-- The navigation Drawer -->
+        <RelativeLayout
+            android:id="@+id/left_drawer"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#ffff"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/left_drawer_child"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/LogOutButton"
+                android:layout_alignParentTop="true"
+                android:choiceMode="singleChoice"
+                android:divider="@color/LightGrey"
+                android:dividerHeight="0dp" />
+
+            <com.cengalabs.flatui.views.FlatButton
+                android:id="@+id/LogOutButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:drawableLeft="@drawable/ic_logout"
+                android:onClick="LogOut_button"
+                android:paddingRight="30dp"
+                android:text="Log Out"
+                android:textColor="@color/Gray"
+                flatui:fl_cornerRadius="0dp"
+                flatui:fl_theme="@array/sea" />
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>

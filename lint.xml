@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <issue id="ContentDescription" severity="ignore" />
+    <issue id="InvalidPackage">
+        <ignore path="libs/junit.jar" />
+    </issue>
+    <issue id="MissingRegistered" severity="ignore">
+        <ignore path="res/layout/calendar_monthview_fragment.xml" />
+        <ignore path="res/layout/log_in_activity.xml" />
+        <ignore path="res/layout/progress_report_fragment.xml" />
+        <ignore path="res/layout/splash_screen_activity.xml" />
+    </issue>
+    <issue id="MissingTranslation">
+        <ignore path="res/values/strings.xml" />
+    </issue>
+    <issue id="OldTargetApi" severity="ignore" />
+    <issue id="ResourceAsColor">
+        <ignore path="src/com/example/ahsl/Loop_Mail_Viewpager_Fragment.java" />
+    </issue>
+</lint>

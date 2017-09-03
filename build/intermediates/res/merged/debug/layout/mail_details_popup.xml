@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll_wrap"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include layout="@layout/popup_dismiss" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/maildet_contwrap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.eevoskos.robotoviews.widget.RobotoTextView
+                android:id="@+id/maildet_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:text="From:"
+                roboto:typeface="regular"
+                android:textSize="15sp"
+                android:textColor="@android:color/black" />
+
+            <HorizontalScrollView
+                android:id="@+id/maildet_to_scroll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:fillViewport="false" >
+
+                <com.eevoskos.robotoviews.widget.RobotoTextView
+                    android:id="@+id/maildet_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="4"
+                    android:text="To:"
+                    roboto:typeface="regular"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black" />
+            </HorizontalScrollView>
+
+            <com.eevoskos.robotoviews.widget.RobotoTextView
+                android:id="@+id/maildet_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:text="Date:"
+                roboto:typeface="regular"
+                android:textSize="15sp"
+                android:textColor="@android:color/black" />
+
+            <include layout="@layout/popup_spacer"/>
+
+            <WebView
+                android:id="@+id/maildet_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:focusable="true" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

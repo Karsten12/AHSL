@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material Design Colors-->
+    <color name="primaryColor">#2196F3</color>
+    <color name="darkPrimaryColor">#1976D2</color>
+    <color name="accentColor">#FFFFFF</color>
+    <color name="primaryText">#212121</color>
+    <color name="secondaryText">#727272</color>
+    <color name="lightPrimaryColor">#BBDEFB</color>
+    <color name="text_iconsColor">#FFFFFF</color>
+    <color name="dividerColor">#B6B6B6</color>
+    
+
+
+    <color name="White">#FFFFFF</color>
+
+ 	<color name="Red">#FF0000</color>
+
+ 	<color name="PowderBlue">#B0E0E6</color>
+ 	<color name="LightSteelBlue">#B0C4DE</color>
+ 	<color name="SlateGray">#708090</color>
+ 	<color name="SlateBlue">#6A5ACD</color>
+ 	<color name="LightSeaGreen">#20B2AA</color>
+    <color name="LightGrey">#D3D3D3</color>
+    <color name="Gray">#808080</color>
+    <color name="Black">#000000</color>
+
+
+</resources>

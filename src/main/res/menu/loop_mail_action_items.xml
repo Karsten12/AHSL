@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--
+    <item
+        android:id="@+id/action_new_mail"
+        android:icon="@drawable/ic_new_mail"
+        android:title="New Mail"
+        app:showAsAction="always">
+    </item>
+    -->
+
+    <item
+        android:id="@+id/refresh"
+        android:icon="@drawable/ic_refresh"
+        android:title="@string/toolbar_refresh"
+        app:showAsAction="always">
+    </item>
+
+
+</menu>

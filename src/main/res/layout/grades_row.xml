@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/OuterLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:gravity="center"
+    android:minHeight="48dp"
+    android:paddingBottom="2dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="2dp">
+
+    <RelativeLayout
+        android:id="@+id/TopLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.eevoskos.robotoviews.widget.RobotoTextView
+
+            android:id="@+id/course_period"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:text="5."
+            android:textColor="#2B65EC"
+            android:textSize="15sp"
+            roboto:typeface="regular" />
+
+
+        <com.eevoskos.robotoviews.widget.RobotoTextView
+            android:id="@+id/grades_course_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/grades_lett_grade"
+            android:layout_toRightOf="@id/course_period"
+            android:ellipsize="end"
+            android:paddingRight="10dp"
+            android:text="Name"
+            android:textColor="@color/Black"
+            android:textSize="15sp"
+            roboto:typeface="regular"/>
+
+        <com.eevoskos.robotoviews.widget.RobotoTextView
+            android:id="@+id/grades_lett_grade"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            roboto:typeface="regular"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:text="A"
+            android:textColor="@color/Black"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/BottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TopLayout">
+
+        <com.eevoskos.robotoviews.widget.RobotoTextView
+            android:id="@+id/grade_zeroes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:text="zero"
+            android:textColor="@color/Gray"
+            android:textSize="12sp"
+            roboto:typeface="regular" />
+
+        <com.eevoskos.robotoviews.widget.RobotoTextView
+            android:id="@+id/grades_pct_grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:maxLines="1"
+            android:text="Pct"
+            android:textSize="14sp"
+            roboto:typeface="regular" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

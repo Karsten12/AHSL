@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/primaryColor">
+
+
+    <com.eevoskos.robotoviews.widget.RobotoTextView
+        android:id="@+id/popup_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="20sp"
+        android:textColor="@color/White"
+        roboto:typeface="regular"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:paddingRight="35dp"
+        android:paddingLeft="5dp" />
+
+    <ImageView
+        android:id="@+id/popup_dismiss"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_close"
+        android:layout_alignParentRight="true"
+        android:paddingRight="5dp"/>
+
+
+    <ProgressBar
+        android:id="@+id/popup_prog"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:paddingRight="5dp">
+    </ProgressBar>
+
+</RelativeLayout>

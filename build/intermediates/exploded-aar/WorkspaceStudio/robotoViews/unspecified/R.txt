@@ -1,0 +1,60 @@
+int attr typeface 0x7f010000
+int id black 0x7f040000
+int id black_italic 0x7f040001
+int id bold 0x7f040002
+int id bold_italic 0x7f040003
+int id condensed 0x7f040004
+int id condensed_bold 0x7f040005
+int id condensed_bold_italic 0x7f040006
+int id condensed_italic 0x7f040007
+int id italic 0x7f040008
+int id light 0x7f040009
+int id light_italic 0x7f04000a
+int id medium 0x7f04000b
+int id medium_italic 0x7f04000c
+int id regular 0x7f04000d
+int id slab_bold 0x7f04000e
+int id slab_light 0x7f04000f
+int id slab_regular 0x7f040010
+int id slab_thin 0x7f040011
+int id thin 0x7f040012
+int id thin_italic 0x7f040013
+int raw roboto_black 0x7f020000
+int raw roboto_black_italic 0x7f020001
+int raw roboto_bold 0x7f020002
+int raw roboto_bold_italic 0x7f020003
+int raw roboto_condensed 0x7f020004
+int raw roboto_condensed_bold 0x7f020005
+int raw roboto_condensed_bold_italic 0x7f020006
+int raw roboto_condensed_italic 0x7f020007
+int raw roboto_italic 0x7f020008
+int raw roboto_light 0x7f020009
+int raw roboto_light_italic 0x7f02000a
+int raw roboto_medium 0x7f02000b
+int raw roboto_medium_italic 0x7f02000c
+int raw roboto_regular 0x7f02000d
+int raw roboto_slab_bold 0x7f02000e
+int raw roboto_slab_light 0x7f02000f
+int raw roboto_slab_regular 0x7f020010
+int raw roboto_slab_thin 0x7f020011
+int raw roboto_thin 0x7f020012
+int raw roboto_thin_italic 0x7f020013
+int string app_name 0x7f030000
+int[] styleable RobotoAutoCompleteTextView { 0x7f010000 }
+int styleable RobotoAutoCompleteTextView_typeface 0
+int[] styleable RobotoButton { 0x7f010000 }
+int styleable RobotoButton_typeface 0
+int[] styleable RobotoCheckBox { 0x7f010000 }
+int styleable RobotoCheckBox_typeface 0
+int[] styleable RobotoCheckedTextView { 0x7f010000 }
+int styleable RobotoCheckedTextView_typeface 0
+int[] styleable RobotoEditText { 0x7f010000 }
+int styleable RobotoEditText_typeface 0
+int[] styleable RobotoRadioButton { 0x7f010000 }
+int styleable RobotoRadioButton_typeface 0
+int[] styleable RobotoSwitch { 0x7f010000 }
+int styleable RobotoSwitch_typeface 0
+int[] styleable RobotoTextView { 0x7f010000 }
+int styleable RobotoTextView_typeface 0
+int[] styleable RobotoToggleButton { 0x7f010000 }
+int styleable RobotoToggleButton_typeface 0

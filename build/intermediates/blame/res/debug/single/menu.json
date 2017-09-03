@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\Karsten\\Desktop\\WorkspaceStudio\\ahsl\\build\\intermediates\\res\\merged\\debug\\menu\\refresh.xml",
+        "source": "C:\\Users\\Karsten\\Desktop\\WorkspaceStudio\\ahsl\\src\\main\\res\\menu\\refresh.xml"
+    },
+    {
+        "merged": "C:\\Users\\Karsten\\Desktop\\WorkspaceStudio\\ahsl\\build\\intermediates\\res\\merged\\debug\\menu\\loop_mail_action_items.xml",
+        "source": "C:\\Users\\Karsten\\Desktop\\WorkspaceStudio\\ahsl\\src\\main\\res\\menu\\loop_mail_action_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\Karsten\\Desktop\\WorkspaceStudio\\ahsl\\build\\intermediates\\res\\merged\\debug\\menu\\grade_details.xml",
+        "source": "C:\\Users\\Karsten\\Desktop\\WorkspaceStudio\\ahsl\\src\\main\\res\\menu\\grade_details.xml"
+    }
+]

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/TableLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:minHeight="48dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+>
+
+    <com.eevoskos.robotoviews.widget.RobotoTextView
+        android:id="@+id/assign_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:text="Assignment"
+        android:textColor="@color/Black"
+        android:textSize="15sp"
+        roboto:typeface="regular" />
+
+
+    <RelativeLayout
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/assign_name">
+
+
+        <com.eevoskos.robotoviews.widget.RobotoTextView
+            android:id="@+id/assign_course_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:ellipsize="end"
+            android:text="Course"
+            android:textColor="@color/Gray"
+            android:textSize="12sp"
+            roboto:typeface="regular"
+            android:paddingRight="10dp"
+            android:layout_toLeftOf="@+id/assign_due_date"
+            android:layout_toStartOf="@+id/assign_due_date" />
+
+
+        <com.eevoskos.robotoviews.widget.RobotoTextView
+            android:id="@+id/assign_due_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Due date"
+            android:gravity="right"
+            android:textColor="@color/Black"
+            android:textSize="12sp"
+            roboto:typeface="regular" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
